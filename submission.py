@@ -55,9 +55,6 @@ class Parameters(object):
                 def check(tag): return check_mandatory_presence(config_data, tag)
 
                 constructor_args = [check(e) for e in EConfigTag]
-
-                print(constructor_args)
-
                 return cls(*constructor_args)
 
             except (AssertionError, KeyError) as err:
